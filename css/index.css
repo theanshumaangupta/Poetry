@@ -55,6 +55,7 @@ body{
 
 label {
     display: flex;
+    user-select: none;
     width: 61px;
     height: 29px;
     border: 2px solid;
@@ -167,8 +168,6 @@ html{
     z-index: 1;
     display: flex;
     width: 100%;
-    /* position: relative; */
-    /* left: 25px; */
     justify-content: space-around;
 }
 .lower-section ul li{
@@ -182,8 +181,10 @@ html{
     transition: 0.1s;
 }
 
-
 .logo::before{
+    animation-name: Highlight-before;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
     content: "";
     transition: 0.4s;
     position: absolute;
@@ -197,6 +198,9 @@ html{
     background: var(--primary-color);
 }
 .logo:after{
+    animation-name: Highlight-after;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
     content: "";
     position: absolute;
     top: 0px;
@@ -208,6 +212,31 @@ html{
     z-index: -1;
     transition: 0.8s;
     background: var(--rare-color);
+}
+.logo:hover::after, .logo:hover::before{
+    animation-play-state: paused;
+}
+@keyframes Highlight-before {
+    0%{
+        transform: scale(130%) rotate(3deg);
+    }   
+    50%{
+        transform: scale(130%) rotate(-3deg);
+    }  
+    100%{
+        transform: scale(130%) rotate(3deg);
+    } 
+}
+@keyframes Highlight-after {
+    0%{
+        transform: scale(130%) rotate(-3deg);
+    }   
+    50%{
+        transform: scale(130%) rotate(3deg);
+    }  
+    100%{
+        transform: scale(130%) rotate(-3deg);
+    } 
 }
 li:hover{
     letter-spacing: 0.4px;
@@ -251,7 +280,7 @@ li:hover{
 }
 @media screen and (max-width:400px) {
     .container{
-	    height: 95vh;
+        height: 95vh    ;
     }
     label:before {
         transition: transform .75s ease;
