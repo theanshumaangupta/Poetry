@@ -1,0 +1,316 @@
+.main{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+    scroll-snap-align: start;
+    font-family: math;
+}
+.green-div{
+    background-color: var(--secondary-color);
+    width: 75%;
+    height: 100%;
+    position: relative;
+}
+.content{
+    transition: 0.3s;
+    opacity: 1;
+}
+.head{
+    padding: 4rem 5rem 2rem 5rem;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+}
+.head h1{
+    color: white;
+    font-size: 1.8rem;
+}
+.head-bullet{
+    margin-right: 1.5rem;
+    height: 2.7rem;
+    width: 0.3rem;
+    background-color: white;
+}
+.feather{
+    width: 35vw;
+    position: absolute;
+    right: 0px;
+    bottom: 0rem;
+    opacity: 0;
+    display: none;
+}
+.menu{
+    display: none;
+    width: 35px;
+    object-fit: contain;
+    filter: invert(1);
+    position: absolute;
+    transition: 0.1s;
+    right: 30px;
+    top: 80px;
+    /* bottom: 30px; */
+    cursor: pointer;
+    z-index: 999999;
+}
+.menu.activated{
+    filter: invert(0%);
+    bottom: 40px;
+
+}
+.para{
+    padding-left:7.5rem ;
+}
+.para h4{
+    user-select: none;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: white;
+    word-spacing: 0.1rem    ;
+
+}
+.cream-div{
+    background-color: #F6F6E9;
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    user-select: none;
+}
+.cream-div.activated{
+    right: 0px;
+    top: 100vh;
+    z-index: 100;
+}
+.cream-div h2{
+    font-size: 1.6rem;
+    color: #7B3911;
+    font-family: 'Rowdies';
+    letter-spacing: 1rem;
+    padding: 1.9rem 0;
+}
+
+.horizontal-div{
+    height: 0.1rem;
+    width: 70%;
+    background-color: var(--primary-color);
+    margin: auto;
+}
+
+.list-div h4{
+    font-weight: 400;
+    font-family: 'Ysabeau Infant', sans-serif;
+    font-size: 1.3rem;
+    line-height: 3.8rem;
+    letter-spacing: 0.2rem;
+    min-width: max-content;
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+    padding: 0rem 2rem;
+    cursor: pointer;
+}
+.list-div h4:hover{
+    background-color: var(--primary-color);
+    box-sizing: content-box;
+    
+}
+
+
+/* ============================================================MEDIA QUERY=============================================== */
+@media screen and (max-width:1400px) {
+    .list-div h4{
+        font-weight: 400;
+        font-family: 'Ysabeau Infant', sans-serif;
+        font-size: 1.1rem;
+        line-height: 3.3rem;
+        letter-spacing: 0.2rem;
+    } 
+
+}
+@media screen and (max-width:1250px) {
+    .list-div h4{
+        font-size: 1rem;
+        line-height: 3rem;
+        letter-spacing: 0.1rem;
+    } 
+
+}
+@media screen and (max-width:1100px) {
+    .list-div{
+        padding-top: 1rem;
+    }
+    .list-div h4{
+        font-size:1rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.05rem;
+    }
+    .cream-div h2{
+        font-size: 1.4rem;
+        padding: 1.9rem 0;
+    } 
+
+}
+@media screen and (max-width:950px) {
+    .cream-div{
+        position: absolute;
+        /* left: 130vw; */
+        /* top: 0; */
+        transition: 0.2s;
+        width: 100vw;
+        top: -200vh;
+        right: 0px;
+    }
+    .menu{
+        /* display: block; */
+        z-index: 999;
+    }
+    .feather{
+        opacity: 0.5;
+    }
+    .green-div{
+        width: 100vw;
+    }
+
+}
+@media screen and (max-width:650px) {
+    .head{
+        padding: 4rem 2rem 2rem 5rem;
+
+    }
+}
+@media screen and (max-width:650px) {
+    .head{
+        padding: 4rem 2rem 2rem 3rem;
+    }
+    .head h1{
+        font-size: 1.4rem;
+    }
+    .para{
+        padding:0 5rem;
+    }
+}
+@media screen and (max-width:500px) {
+    .para h4{
+        word-spacing: 0rem;
+        letter-spacing: 0.05rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .head{
+        padding: 4rem 2rem 2rem 1.5rem;
+    }
+    .head h1{
+        font-size: 1.4rem;
+    }
+    .para{
+        padding-left: 4rem;
+        line-height: 1.4rem;
+    }
+    .menu{
+        width: 28px;
+    }
+}
+@media screen and (max-width:400px) {
+    .head{
+        padding: 4rem 1rem 2rem 0.8rem;
+    }
+    .head h1{
+        font-size: 1.3rem;
+    }
+    .para{
+        padding: 0 2rem;
+        line-height: 1.4rem;
+    }
+    .para h4{
+        letter-spacing: 0rem;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .menu{
+        width: 23px;
+    }
+    .head-bullet{
+        margin-right: 1rem;
+    }
+}
+
+/*=================================================ANIMATION=================================================================== */
+.menu-animation {
+    -webkit-animation-name: MenuAnimation;
+    animation-name: MenuAnimation;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+    @-webkit-keyframes MenuAnimation {
+    0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+    /* display: block !important; */
+    }
+    60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+    }
+    }
+    @keyframes MenuAnimation {
+    0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+    }
+    60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+    }
+    80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+    }
+    100% {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+    }
+}
+
+.feather-animation {
+        -webkit-animation-name: feather-animation;
+        animation-name: feather-animation;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes feather-animation {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+        }
+        @keyframes feather-animation {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+        } 

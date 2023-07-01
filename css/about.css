@@ -1,0 +1,311 @@
+.about-section-div{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -200vh;
+    left: 0px;
+    transition: 0.7s;
+    z-index: 100;
+}
+.about-section-div.activated{
+    top: 0px;
+}
+.close{
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+    right: 40px;
+    cursor: pointer;
+}
+.about-child-div{
+    display: flex;
+    background-color: #F6F6E9;
+    width: 80vw;
+    height: 80vh;
+    z-index: 9;
+}
+.left-div{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left-h1-div{
+    /* flex: 1; */
+    padding: 2rem 0 0 2rem;
+}
+.left-div h1{
+    letter-spacing: 0.4rem;
+    font-size: 4rem;
+    color: var(--rare-color);
+    font-family: 'Courgette', cursive;
+}
+.left-para-div{
+    /* flex: 4; */
+    line-height: 2rem;
+    word-spacing: 0.5rem;
+    width: 70%;
+    padding:2rem 0 0rem 5rem;
+    display: flex;
+    align-items: center;
+    
+}
+.left-para-div h4{
+    font-size:1.2rem ;
+    font-family: Quicksand;
+    font-weight: 100;
+    color: var(--rare-color);
+}
+.left-line-div{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 1;
+    font-family: courgette;
+    padding:0 0 1rem 5rem;
+    line-height: 1.6rem;
+    word-spacing: 0.3rem;
+    color: var(--rare-color);
+    
+}
+.right-div{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.right-child-div{
+    width: 100%;
+}
+.cat{
+    position: relative;
+    bottom:-20px;
+    width: 8vw;
+
+}
+.base-div{
+    background-color: var(--primary-color);
+    height: 8vw;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.base-div h1{
+    font-family: 'courgette';
+    font-weight: 100;
+    color: var(--rare-color);
+    font-size: 4rem;
+    letter-spacing: 0.9REM;
+}
+.base-div img{
+    filter: drop-shadow(5px 0px 0 white)
+    drop-shadow(-1px -1px 0 white);
+    position: absolute;
+    right: 5vw;
+    bottom:10vh;
+    width: 15vw;
+}
+
+
+
+/* ===============================================MEDIA QUERY======================================================================== */
+@media screen and (max-width:1500px){
+    .left-h1-div{
+        padding: 1rem 0 0 2rem;
+    }
+    .left-para-div{
+        padding:1rem 0 0rem 5rem;
+    }
+    .left-para-div h4{
+        line-height: 1.9rem;
+        font-size: 1rem;
+    }
+    .left-line-div{
+        padding:0 0 0.5rem 5rem;
+    }}
+@media screen and (max-width:1450px){
+    .left-h1-div{
+        padding: 1rem 0 0 2rem;
+    }
+    .left-para-div{
+        padding:1rem 0 0rem 5rem;
+    }
+    .left-para-div h4{
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+    .left-line-div{
+        padding:0 0 0.5rem 5rem;
+    }
+}
+@media screen and (max-width:1400px){
+    .base-div {
+        padding-left: 2rem;
+        width: 100%;
+        justify-content: left;
+    }
+    .base-div h1{
+        font-size: 3rem;
+    }
+    .cat{
+        bottom: -17px;
+    }
+}
+@media screen and (max-width:1300px){
+    .left-h1-div h1{
+        font-size: 3rem;
+    }
+    .left-para-div h4{
+        line-height: 1.7rem;
+    }
+}
+@media screen and (max-width:1100px){
+    .left-h1-div h1{
+        font-size: 2.5rem;
+    }
+    .left-para-div h4{
+        line-height: 1.5rem;
+    }
+    .left-line-div h3{
+        font-size: 1rem;
+    }
+    .base-div h1{
+        font-size: 2.5rem;
+    }
+    .cat{
+        bottom: -15px;
+    }
+}
+@media screen and (max-width:1000px){
+    .left-para-div h4{
+        line-height: 1.3rem;
+    }
+    .base-div h1{
+        font-size: 2.3rem;
+    }
+    .left-para-div{
+        width: 75%;
+    }
+}
+@media screen and (max-width:850px){    
+    .left-para-div h4{
+        word-spacing: 0.4rem;
+        line-height: 1.2rem;
+    }
+    .base-div{
+        padding-left: 1rem;
+    }
+    .left-line-div{
+        padding: 0 0 0.5rem 3rem;
+    }
+    .base-div h1{
+        font-size: 2rem;
+    }
+    .left-para-div{
+        width: 80%;
+        padding: 1rem 0 0rem 3rem;
+    }
+    .cat{
+        bottom: -13px;
+    }
+}
+@media screen and (max-width:700px){
+    .base-div h1 {
+        font-size: 1rem;
+        letter-spacing: 0.5rem;
+
+    }
+    .left-line-div h3 {
+        font-size: 0.7rem;
+
+    }
+    .left-h1-div h1 {
+        font-size: 2rem;
+    }
+    .left-para-div{
+        width: 90%;
+        padding: 1rem 0 0rem 3rem;
+    }
+    .left-para-div h4{
+        word-spacing: 0.4rem;
+        font-size: 0.8rem;
+    }
+    .cat{
+        bottom: -11px;
+    }
+    .base-div img {
+        right: 1vw;
+        bottom: 10vh;
+        width: 25vw;}
+    
+}
+@media screen and (max-width:550px){
+    .left-h1-div {
+        padding: 1rem 0 0 1rem;
+    }
+    .left-h1-div h1 {
+        font-size: 1.1rem;
+    }
+    .left-line-div {
+        padding: 0 0 0.5rem 2rem;
+        justify-content: center;
+    }
+    .left-line-div h3 {
+        font-size: 0.6rem;
+    }
+    .left-para-div{
+        width: 100%;
+        padding: 1rem 0 0rem 2rem;
+    }
+    .left-para-div h4{
+        word-spacing: 0rem;
+        font-size: 0.8rem;
+    }
+    .base-div h1 {
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+    }
+    .base-div{
+        padding-right: 100px;
+        z-index: 999;
+        padding-left: 0.5rem;
+        width: 130%;
+    }
+    .cat{
+        bottom: -8px;
+    }
+    .base-div img {
+        right: 1vw;
+        bottom: 10vh;
+        width: 30vw;}
+}
+@media screen and (max-width:500px){
+    .base-div h1{
+        display: none;
+    }
+    .left-para-div h4{
+        
+    }
+}
+@media screen and (max-width:350px){
+    .left-h1-div h1{
+        font-size: 0.9rem;
+    }
+    .left-para-div h4{
+        font-size: 0.6rem;
+        letter-spacing: 0rem;
+        word-spacing: 0rem;
+    }
+    .left-line-div h3{
+        letter-spacing: 0rem;
+        font-size: 0.5rem;
+        word-spacing: 0rem;
+        line-height: 1rem;
+    }
+}
