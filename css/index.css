@@ -250,6 +250,9 @@ li:hover{
     }
 }
 @media screen and (max-width:400px) {
+    .container{
+	    height: 95vh;
+    }
     label:before {
         transition: transform .75s ease;
         transition-delay: .5s;
