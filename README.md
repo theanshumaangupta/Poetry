@@ -1,2 +1,2 @@
 # Poetry
-https://anshumangupta-code.github.io/Poetry/
+https://theanshumaangupta.github.io/Poetry/
